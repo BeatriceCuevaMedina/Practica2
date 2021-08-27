@@ -1,4 +1,4 @@
-﻿<%@ Master Language="VB" AutoEventWireup="true" CodeBehind="Site.master.vb" Inherits="ConvertidorDeTemperatura.SiteMaster" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="ConversorDeTemperaturas.SiteMaster" %>
 
 <!DOCTYPE html>
 
@@ -12,10 +12,13 @@
         <h1>Conversor de temperatura</h1>
         Convertir: &nbsp;
         <input type="number" id="valor" runat="server"/>
-        &nbsp;Fahrenheith a Centigrados.
+        &nbsp;Fahrenheith a 
+        <select id="Temperaturas" runat="server"/>
         <br/><br/>
-        <p>Resultado: </p>&nbsp;
-        <output id="Convertir" runat="server" name="resultado" for="valor"></output>
+        <input type="submit" id="Convertir" runat="server" value="Aceptar" OnServerClick ="Convertir_ServerClick" />
+        <br/>
+        <div style="font-weight:bold" id="Resultado" runat="server"></div>
+        &nbsp;
     </div>
     </form>
         <div class="container body-content">
