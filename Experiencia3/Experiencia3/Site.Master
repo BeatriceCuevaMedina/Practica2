@@ -1,0 +1,38 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="Experiencia3.SiteMaster" %>
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Concert+One&display=swap" rel="stylesheet">
+    <title>Conversor de temperatura</title>
+    <link rel="stylesheet" href="Estilos.css"/>
+</head>
+<body>
+    <form  id="Form1" runat="server" method="POST" oninput="resultado.value=(parseFloat(valor.value)-32)/1.8">
+    <div class="ejm_principal">
+        <h1>Conversor de temperatura</h1>
+        Convertir: &nbsp;
+        <input type="number" id="valor" runat="server"/>
+        &nbsp;Fahrenheith a 
+        <select id="Temperaturas" runat="server"/>
+        <br/><br/>
+        <input type="submit" id="Convertir" runat="server" value="Aceptar" OnServerClick ="Convertir_ServerClick" />
+        <br/>
+        <div style="font-weight:bold" id="Resultado" runat="server"></div>
+        <input type="submit" id="MostrarGrafico" runat="server" value="Mostrar Figura" OnServerClick ="MostrarGrafico_ServerClick"/>        <br/>        <img id="Grafico" runat="server"/>
+        &nbsp;
+    </div>
+    </form>
+        <div class="container body-content">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+            </asp:ContentPlaceHolder>
+            <hr />
+            <footer>
+                <p>&copy; <%: DateTime.Now.Year %> - Mi aplicación ASP.NET</p>
+            </footer>
+        </div>
+</body>
+</html>

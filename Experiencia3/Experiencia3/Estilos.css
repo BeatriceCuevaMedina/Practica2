@@ -1,0 +1,42 @@
+﻿body {
+    background-color: #DAF7A6;
+    text-align: center;
+    color: #74A41D;
+    font-family: 'Concert One', cursive;
+}
+.ejm_principal {
+    width: 50%;
+    margin: 1rem;
+    padding: 1rem;
+    position: center;
+    border: 2px solid;
+    border-color: #F9FFED;
+    display: inline-block;
+    background-color: #F9FFED;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px #C9D7AE;
+}
+input[type="number"] {
+    border: 2px solid #ccc;
+    background-color: #f8f8f8;
+    border-radius: 20px;
+    width: 100%;
+    padding: 5px 10px;
+    margin: 10px 0;
+    box-sizing: border-box;
+    text-align:center;
+}
+input[type="submit"] {
+    width: 50%;
+    padding: 5px 10px;
+    margin: 10px 0;
+    box-sizing: border-box;
+}
+select {
+    padding: 0 1em 0 0;
+    margin: 0;
+    font-family: inherit;
+    font-size: inherit;
+    cursor: inherit;
+    line-height: inherit;
+}
